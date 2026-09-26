@@ -189,3 +189,13 @@ function toggleMenu() {
     <!-- カードここまで -->
 
 </a>
+<!-- 効果音 -->
+<audio id="clickSound" src="ぬちゃ.mp3"></audio>
+
+<script>
+/* クリック音 */
+document.addEventListener("click", function() {
+    document.getElementById("clickSound").currentTime = 0;
+    document.getElementById("clickSound").play();
+});
+</script>
