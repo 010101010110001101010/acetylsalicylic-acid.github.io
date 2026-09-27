@@ -282,12 +282,12 @@ const appearTime = Math.random() * 10000 + 5000;
 
 setTimeout(() => {
 
-    /* 60%の確率で出現 */
-    if (Math.random() < 0.6) {
+    /* 50%の確率で出現 */
+    if (Math.random() < 0.5) {
 
         button.style.display = "block";
 
-        /* 10秒後に消える */
+        /* 5秒後に消える */
         setTimeout(() => {
             button.style.display = "none";
         }, 10000);
