@@ -22,15 +22,24 @@ body {
 </html>
 <!-- 来場者数カウンター -->
 <div style="
+    border: 3px solid #d00000;
+    background: #080808;
+    padding: 20px;
+    margin: 30px auto;
+    width: 260px;
     text-align: center;
-    margin: 30px;
+    box-sizing: border-box;
+    box-shadow:
+        inset 3px 3px 0 #333333,
+        inset -3px -3px 0 #000000,
+        5px 5px 0 #000000;
 ">
 
     <div style="
-        color: red;
+        color: #d00000;
         font-size: 20px;
         font-weight: bold;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     ">
         VISITORS
     </div>
@@ -152,6 +161,16 @@ body {
 }
 </style>
 
+<!-- REQUESTの動き -->
+<script>
+function openRequest() {
+    document.getElementById("requestPage").style.display = "block";
+}
+
+function closeRequest() {
+    document.getElementById("requestPage").style.display = "none";
+}
+</script>
 <script>
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("open");
