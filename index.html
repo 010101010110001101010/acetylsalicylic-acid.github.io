@@ -257,4 +257,9 @@ button.addEventListener("click", () => {
 
     video.play();
 });
+    // 動画が終わったら消す
+video.addEventListener("ended", () => {
+    video.style.display = "none";
+    video.currentTime = 0;
+}, { once: true });
 </script>
