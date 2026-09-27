@@ -199,3 +199,62 @@ document.addEventListener("click", function() {
     document.getElementById("clickSound").play();
 });
 </script>
+
+<!-- 押さないでねボタン -->
+<button id="dontPushButton" style="
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: red;
+    border: 3px solid red;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 9999;
+">
+    押さないでね
+</button>
+
+<!-- 押した時に流す動画 -->
+<video id="secretVideo" src="音割れゆっくりしんちゃん.mp4"
+       style="display:none;"
+       playsinline>
+</video>
+
+<script>
+const button = document.getElementById("dontPushButton");
+const video = document.getElementById("secretVideo");
+
+/* 5〜15秒後に出現 */
+const appearTime = Math.random() * 10000 + 5000;
+
+setTimeout(() => {
+
+    /* 60%の確率で出現 */
+    if (Math.random() < 0.6) {
+
+        button.style.display = "block";
+
+        /* 2秒後に消える */
+        setTimeout(() => {
+            button.style.display = "none";
+        }, 2000);
+    }
+
+}, appearTime);
+
+
+/* 押されたら動画再生 */
+button.addEventListener("click", () => {
+
+    button.style.display = "none";
+
+    video.style.display = "block";
+    video.volume = 1.0;
+
+    video.play();
+});
+</script>
