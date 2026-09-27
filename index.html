@@ -57,6 +57,9 @@ body {
         <a href="#world">WORLD</a>
         <a href="javascript:void(0);" onclick="openCreator()">
             CREATOR</a>
+        <a href="javascript:void(0);" onclick="openRequest()">
+    REQUEST
+</a>
         <a href="donate.html">DONATE</a>
     </div>
 
@@ -650,5 +653,93 @@ function openCreator() {
 
 function closeCreator() {
     document.getElementById("creatorPage").style.display = "none";
+}
+</script>
+
+    <!-- 依頼ページ -->
+<div id="requestPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('IMG_1239.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    z-index: 10000;
+    overflow-y: auto;
+    padding: 30px;
+    box-sizing: border-box;
+">
+
+    <!-- タイトル -->
+    <h1 style="
+        text-align: center;
+        font-size: 12vw;
+        color: black;
+    ">
+        依頼はここから🎶
+    </h1>
+
+    <!-- 依頼リンクボックス -->
+    <div style="
+        border: 3px solid #888888;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 25px;
+        margin: 30px auto;
+        max-width: 500px;
+        text-align: center;
+        box-sizing: border-box;
+    ">
+
+   <!-- SKeb -->
+<a href="https://skeb.jp/@ShogaishaKoyou" target="_blank">
+    <img src="skeb.png"
+         alt="SKeb"
+         style="width: 120px; margin: 10px;">
+</a>
+
+<!-- Twitter -->
+<a href="https://x.com/shogaishakoyou?s=11" target="_blank">
+    <img src="x.png"
+         alt="Twitter"
+         style="width: 120px; margin: 10px;">
+</a>
+
+    </div>
+
+    <!-- BACKボタン -->
+    <button onclick="closeRequest()" style="
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 10001;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    ">
+
+        <img src="tester back.PNG"
+             alt="BACK"
+             style="
+                width: 120px;
+                display: block;
+             ">
+
+    </button>
+
+</div>
+
+<script>
+function openRequest() {
+    document.getElementById("requestPage").style.display = "block";
+}
+
+function closeRequest() {
+    document.getElementById("requestPage").style.display = "none";
 }
 </script>
