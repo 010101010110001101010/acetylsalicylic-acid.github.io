@@ -217,6 +217,18 @@ body {
     }
 
 }
+    /* SNSロゴ */
+.sns-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+.sns-links img {
+    width: 55px !important;
+    margin: 3px !important;
+}
 </style>
 
 <!-- REQUESTの動き -->
@@ -676,7 +688,7 @@ video.addEventListener("ended", () => {
 </div>
 
 <!-- SNS / 連絡先ボックス -->
-<div style="
+<div class="sns-links" style="
     border: 3px solid #888888;
     background: rgba(255, 255, 255, 0.6);
     padding: 15px;
@@ -786,7 +798,7 @@ function closeCreator() {
     </h1>
 
     <!-- 依頼リンクボックス -->
-    <div style="
+    <div class="sns-links" style="
         border: 3px solid #888888;
         background: rgba(255, 255, 255, 0.6);
         padding: 25px;
