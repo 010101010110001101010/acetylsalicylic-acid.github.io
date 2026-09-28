@@ -1,875 +1,1237 @@
 <!DOCTYPE html>
-<style>
-body {
-    background-image: url("IMG_2461.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-    /* sp */
-    @media screen and (max-width: 767px) {
-    body {
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-    }
-}
-</style>
-<html>
+<html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <title>MY OC ENCYCLOPEDIA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-</head>
-<body>
-  <h1 style="
-    color: #C50000;
-    font-size: 7vw;
-    font-family: 'UnifrakturMaguntia', serif;
-    -webkit-text-stroke: 1px #000;
-">
-    Welcome to CHAOS....
-</h1>
-  <p style="color: white;">準備中😤</p>
-</body>
-</html>
-<!-- 来場者数カウンター -->
-<div style="
-    border: 3px solid #d00000;
-    background: #080808;
-    padding: 20px;
-    margin: 30px auto;
-    width: 260px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow:
-        inset 3px 3px 0 #333333,
-        inset -3px -3px 0 #000000,
-        5px 5px 0 #000000;
-">
+    <title>MY OC ENCYCLOPEDIA</title>
 
-    <div style="
-        color: #d00000;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    ">
-        VISITORS
-    </div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <script src="https://nostalgic.llll-ll.com/components/visit.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet"
+    >
 
-    <nostalgic-counter
-    id="010101010110001101010-a8f3e68b"
-    type="total"
-    theme="dark"
-    style="
-        color: #d00000;
-        font-size: 30px;
-        font-weight: bold;
-    ">
-</nostalgic-counter>
+    <style>
 
-</div>
-<a href="#" class="top-button">
-    <img src="47_20260714233645.png" alt="TOP">
-</a>
+        /* =========================
+           BODY
+        ========================= */
 
-<style>
-.top-button {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 1000;
-}
+        body {
+            margin: 0;
 
-.top-button img {
-    width: 20vw;
-    transform: rotate(10deg);
-}
-</style>
+            background-image: url("IMG_2461.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
 
-<!-- 三本線 -->
-<button class="menu-button" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
 
-<!-- メニュー -->
-<div id="menu" class="menu">
+        /* =========================
+           TOP BUTTON
+        ========================= */
 
-    <img src="menuwallpaper.PNG" class="menu-background">
+        .top-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+        }
 
-    <div class="menu-links">
-        <a href="#characters">CHARACTERS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#world">WORLD</a>
-        <a href="javascript:void(0);" onclick="openCreator()">
-            CREATOR</a>
-        <a href="javascript:void(0);" onclick="openRequest()">
-    REQUEST
-</a>
-        <a href="donate.html">DONATE</a>
-    </div>
+        .top-button img {
+            width: 20vw;
+            transform: rotate(10deg);
+        }
 
-</div>
 
-<style>
-/* 三本線 */
-.menu-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    background: none;
-    border: none;
-    padding: 10px;
-}
+        /* =========================
+           MENU BUTTON
+        ========================= */
 
-.menu-button span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background: red;
-    margin: 6px 0;
-}
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
 
-/* メニュー */
-.menu {
-    position: fixed;
-    top: 0;
-    right: -600px;
-    width: 600px;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1000;
-    overflow: hidden;
-    transition: right 0.3s;
-}
+            background: none;
+            border: none;
+            padding: 10px;
+        }
 
-/* メニューを開いた状態 */
-.menu.open {
-    right: 0;
-}
+        .menu-button span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background: red;
+            margin: 6px 0;
+        }
 
-/* 背景画像 */
-.menu-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: -1;
-}
 
-/* 画像の上に乗せる文字 */
-.menu-links {
-    position: relative;
-    z-index: 1;
-    padding-top: 100px;
-}
-    
-/* SP（スマホ） */
+        /* =========================
+           MENU
+        ========================= */
 
-@media screen and (max-width: 767px) {
- .menu {
-    width: 100%;
-    right: -100%;
-}
-    /* メニュー文字 */
-    .menu-links {
-        position: relative;
-        z-index: 1;
-        width: fit-content;
-        box-sizing: border-box;
-        text-align: left;
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -600px;
 
-        /* 上下の位置 */
-        padding-top: 100px;
+            width: 600px;
+            height: 100%;
 
-        /* 左右の位置 */
-        margin-left: auto;
-        margin-right: 100px;
-    }
+            background: #000;
 
-    /* メニュー文字1個ずつ */
-  .menu-links a {
+            z-index: 1000;
+            overflow: hidden;
 
-        display: block;
+            transition: right 0.3s;
+        }
 
-        padding: 0 !important;
+        .menu.open {
+            right: 0;
+        }
 
-        margin: 0 !important;
 
-        line-height: 1 !important;
+        /* =========================
+           MENU BACKGROUND IMAGE
+        ========================= */
 
-        color: red;
+        .menu-background {
+            position: absolute;
 
-        font-size: 5vw;
+            width: 100%;
+            height: 100%;
 
-        font-weight: bold;
+            object-fit: contain;
+            object-position: right center;
 
-        text-decoration: none;
+            top: 0;
+            right: 0;
 
-    }
+            z-index: 0;
+        }
 
-}
 
-        /* 文字同士の上下の間隔 */
-        margin: 1px 0;
-        line-height: 1.1;
-    }
+        /* =========================
+           MENU LINKS
+        ========================= */
 
-    /* メニュー背景 */
-    .menu-background {
-        width: 40%;
-        height: 100%;
-        object-fit: contain;
-        object-position: right center;
-    }
+        .menu-links {
+            position: relative;
+            z-index: 1;
 
-}
-    /* SNSロゴ */
-.sns-links {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: nowrap;
-}
+            width: fit-content;
 
-.sns-links img {
-    width: 55px !important;
-    margin: 3px !important;
-}
-</style>
+            padding-top: 100px;
 
-<!-- REQUESTの動き -->
-<script>
-function openRequest() {
-    document.getElementById("requestPage").style.display = "block";
-}
+            margin-left: auto;
+            margin-right: 60px;
 
-function closeRequest() {
-    document.getElementById("requestPage").style.display = "none";
-}
-</script>
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("open");
-}
-</script>
-<!-- ぼっくす -->
-<div style="
-    border: 3px solid red;
-    background: black;
-    color: red;
-    padding: 40px 20px;
-    text-align: center;
-    margin: 20px;
-    font-size: 40px;
-    font-family: 'Playfair Display', serif;
-">
-    MY OC ENCYCLOPEDIA
-</div>
+            text-align: left;
+        }
 
-<!-- キャラクターボタン -->
-<a href="lucky.html" style="text-decoration: none;">
+        .menu-links a {
+            display: block;
 
-    <!-- ここからカード -->
-    <div style="
-        display: inline-block;
-        width: 220px;
-        background: #080808;
-        border: 4px solid #d00000;
-        padding: 8px;
-        text-align: center;
-        margin: 10px;
-        box-shadow:
-            inset 3px 3px 0 #333333,
-            inset -3px -3px 0 #000000,
-            5px 5px 0 #000000;
-    ">
+            padding: 0;
+            margin: 0;
 
-        <!-- 画像 -->
-        <div style="
-            background: #000000;
-            border: 3px solid #d00000;
-            padding: 4px;
-        ">
-            <img src="cyp faceshot.PNG"
-                 alt="Cypress Vine"
-                 style="
-                    width: 100%;
-                    height: 250px;
-                    object-fit: cover;
-                    display: block;
-                 ">
-        </div>
+            line-height: 1;
 
-        <!-- 名前 -->
-        <div style="
-            color: #d00000;
+            color: red;
+
             font-size: 28px;
             font-weight: bold;
-            padding: 15px 5px 10px;
-        ">
-            Cypress Vine
-        </div>
 
-    </div>
-    <!-- カードここまで -->
-</a>
+            text-decoration: none;
+        }
 
-<!-- ありーなボタン -->
-<a href="aus.html" style="text-decoration: none;">
 
-    <div style="
-        display: inline-block;
-        width: 220px;
-        background: #080808;
-        border: 4px solid #d00000;
-        padding: 8px;
-        text-align: center;
-        margin: 10px;
-        box-shadow:
-            inset 3px 3px 0 #333333,
-            inset -3px -3px 0 #000000,
-            5px 5px 0 #000000;
-    ">
+        /* =========================
+           VISITOR COUNTER
+        ========================= */
 
-        <!-- 画像 -->
-        <div style="
-            background: #000000;
+        .visitor-counter {
             border: 3px solid #d00000;
-            padding: 4px;
-        ">
-            <img src="alina faceshot.jpg"
-                 alt="Alina Vysotsky"
-                 style="
-                    width: 100%;
-                    height: 250px;
-                    object-fit: cover;
-                    display: block;
-                 ">
-        </div>
+            background: #080808;
 
-        <!-- 名前 -->
-        <div style="
+            padding: 20px;
+            margin: 30px auto;
+
+            width: 260px;
+
+            text-align: center;
+            box-sizing: border-box;
+
+            box-shadow:
+                inset 3px 3px 0 #333333,
+                inset -3px -3px 0 #000000,
+                5px 5px 0 #000000;
+        }
+
+        .visitor-title {
             color: #d00000;
-            font-size: 28px;
+            font-size: 20px;
             font-weight: bold;
-            padding: 15px 5px 10px;
-        ">
-            Alina Vysotsky
-        </div>
-
-    </div>
-
-</a>
-<!-- 効果音 -->
-<audio id="clickSound" src="ぬちゃ.mp3"></audio>
-
-<script>
-/* クリック音 */
-document.addEventListener("click", function() {
-    document.getElementById("clickSound").currentTime = 0;
-    document.getElementById("clickSound").play();
-});
-</script>
-
-<!-- 押さないでねボタン -->
-<button id="dontPushButton" style="
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: black;
-    color: red;
-    border: 3px solid red;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
-    z-index: 9999;
-">
-    押さないでね
-</button>
-
-<!-- 押した時に流す動画 -->
-<video id="secretVideo" src="音割れゆっくりしんちゃん.mp4"
-       style="display:none;"
-       playsinline>
-</video>
-
-<script>
-const button = document.getElementById("dontPushButton");
-const video = document.getElementById("secretVideo");
-
-/* 5〜15秒後に出現 */
-const appearTime = Math.random() * 10000 + 5000;
-
-setTimeout(() => {
-
-    /* 50%の確率で出現 */
-    if (Math.random() < 0.5) {
-
-        button.style.display = "block";
-
-        /* 5秒後に消える */
-        setTimeout(() => {
-            button.style.display = "none";
-        }, 10000);
-    }
-
-}, appearTime);
+            margin-bottom: 10px;
+        }
 
 
-/* 押されたら動画再生 */
-button.addEventListener("click", () => {
+        /* =========================
+           SNS ICONS
+        ========================= */
 
-    button.style.display = "none";
+        .sns-icons {
+            display: flex;
 
-    video.style.display = "block";
-    video.volume = 1.0;
+            justify-content: center;
+            align-items: center;
 
-    video.play();
-});
-    // 動画が終わったら消す
-video.addEventListener("ended", () => {
-    video.style.display = "none";
-    video.currentTime = 0;
-}, { once: true });
-</script>
+            gap: 5px;
 
-<!-- キャラクターボタン -->
-<a href="aus.html" style="text-decoration: none;">
+            flex-wrap: nowrap;
+        }
 
-    <div style="
-        display: inline-block;
-        width: 220px;
-        background: #080808;
-        border: 4px solid #d00000;
-        padding: 8px;
-        text-align: center;
-        margin: 10px;
-        box-shadow:
-            inset 3px 3px 0 #333333,
-            inset -3px -3px 0 #000000,
-            5px 5px 0 #000000;
-    ">
+        .sns-icons img {
+            width: 60px;
+            margin: 3px;
+            display: block;
+        }
 
-        <!-- 画像 -->
-        <div style="
-            background: #000000;
-            border: 3px solid #d00000;
-            padding: 4px;
-        ">
-            <img src="tester faceshot.jpg"
-                 alt="Tester"
-                 style="
-                    width: 100%;
-                    height: 250px;
-                    object-fit: cover;
-                    display: block;
-                 ">
-        </div>
 
-        <!-- 名前 -->
-        <div style="
+        /* =========================
+           CREATOR PAGE
+        ========================= */
+
+        #creatorPage {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-image: url("無題51_20260926025200.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
             color: #d00000;
-            font-size: 28px;
-            font-weight: bold;
-            padding: 15px 5px 10px;
-        ">
-            Tester
-        </div>
 
-    </div>
+            z-index: 10000;
 
-</a>
+            overflow-y: auto;
 
-<!-- キャラクターボタン -->
-<a href="aus.html" style="text-decoration: none;">
+            padding: 30px;
+            box-sizing: border-box;
+        }
 
-    <div style="
-        display: inline-block;
-        width: 220px;
-        background: #080808;
-        border: 4px solid #d00000;
-        padding: 8px;
-        text-align: center;
-        margin: 10px;
-        box-shadow:
-            inset 3px 3px 0 #333333,
-            inset -3px -3px 0 #000000,
-            5px 5px 0 #000000;
-    ">
+        #creatorPage h1 {
+            font-size: 15vw;
+            color: black;
+        }
 
-        <!-- 画像 -->
-        <div style="
-            background: #000000;
-            border: 3px solid #d00000;
-            padding: 4px;
-        ">
-            <img src="aus faceshot.jpg"
-                 alt="Auspicious"
-                 style="
-                    width: 100%;
-                    height: 250px;
-                    object-fit: cover;
-                    display: block;
-                 ">
-        </div>
+        #creatorPage .creator-name {
+            font-size: 7vw;
+            color: black;
+        }
 
-        <!-- 名前 -->
-        <div style="
-            color: #d00000;
-            font-size: 28px;
-            font-weight: bold;
-            padding: 15px 5px 10px;
-        ">
-            Auspicious
-        </div>
 
-    </div>
+        /* =========================
+           CREATOR SNS BOX
+        ========================= */
 
-</a>
+        .creator-sns-box {
+            border: 3px solid #888888;
 
-<!-- キャラクターボタン -->
-<a href="aus.html" style="text-decoration: none;">
+            background: rgba(255, 255, 255, 0.6);
 
-    <div style="
-        display: inline-block;
-        width: 220px;
-        background: #080808;
-        border: 4px solid #d00000;
-        padding: 8px;
-        text-align: center;
-        margin: 10px;
-        box-shadow:
-            inset 3px 3px 0 #333333,
-            inset -3px -3px 0 #000000,
-            5px 5px 0 #000000;
-    ">
+            padding: 15px;
 
-        <!-- 画像 -->
-        <div style="
-            background: #000000;
-            border: 3px solid #d00000;
-            padding: 4px;
-        ">
-            <img src="lucky faceshot.jpg"
-                 alt="Lucky"
-                 style="
-                    width: 100%;
-                    height: 250px;
-                    object-fit: cover;
-                    display: block;
-                 ">
-        </div>
+            margin: 20px 0 20px auto;
 
-        <!-- 名前 -->
-        <div style="
-            color: #d00000;
-            font-size: 28px;
-            font-weight: bold;
-            padding: 15px 5px 10px;
-        ">
-            Lucky
-        </div>
+            width: 55%;
+            min-height: 120px;
 
-    </div>
+            box-sizing: border-box;
 
-</a>
+            color: black;
+        }
 
-<!-- ろーれんボタン -->
-<a href="aus.html" style="text-decoration: none;">
 
-    <div style="
-        display: inline-block;
-        width: 220px;
-        background: #080808;
-        border: 4px solid #d00000;
-        padding: 8px;
-        text-align: center;
-        margin: 10px;
-        box-shadow:
-            inset 3px 3px 0 #333333,
-            inset -3px -3px 0 #000000,
-            5px 5px 0 #000000;
-    ">
+        /* =========================
+           REQUEST PAGE
+        ========================= */
 
-        <!-- 画像 -->
-        <div style="
-            background: #000000;
-            border: 3px solid #d00000;
-            padding: 4px;
-        ">
-            <img src="loren faceshot.jpg"
-                 alt="Loren"
-                 style="
-                    width: 100%;
-                    height: 250px;
-                    object-fit: cover;
-                    display: block;
-                 ">
-        </div>
+        #requestPage {
+            display: none;
 
-        <!-- 名前 -->
-        <div style="
-            color: #d00000;
-            font-size: 28px;
-            font-weight: bold;
-            padding: 15px 5px 10px;
-        ">
-            Loren
-        </div>
+            position: fixed;
 
-    </div>
+            top: 0;
+            left: 0;
 
-</a>
+            width: 100%;
+            height: 100%;
 
-<!-- 作者ページ -->
-<div id="creatorPage" style="
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('無題51_20260926025200.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #d00000;
-    z-index: 10000;
-    overflow-y: auto;
-    padding: 30px;
-    box-sizing: border-box;
-">
+            background-image: url("IMG_1239.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
 
-    <h1 style="font-size: 15vw; color: black;">CREATOR</h1>
+            color: black;
 
-    <p style="font-size: 7vw; color: black;">Name:Chihiro/アセチルサリチル酸</p>
+            z-index: 10000;
 
-<!-- Q&Aボックス -->
-<div style="
-    border: 3px solid #888888;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    margin: 20px 0;
-    color: black;
-    text-align: center;
-">
+            overflow-y: auto;
 
-    <h3 style="color: black;">Q&A</h3>
+            padding: 30px;
+            box-sizing: border-box;
+        }
 
-    <p>
-        <strong>Q. このサイトについて</strong><br>
-        OCが多すぎて収拾つかないので、まとめて見れるようにしたかった。<br>
-        <small>I have too many OCs, so I wanted a place where I could keep them all together.</small>
-    </p>
+        #requestPage h1 {
+            text-align: center;
+            font-size: 12vw;
+            color: black;
+        }
 
-    <p>
-        <strong>Q. OCを作るようになったきっかけ</strong><br>
-        絵かいてたらなんぼでも増えます😰<br>
-        <small>They just keep multiplying whenever I draw. 😰</small>
-    </p>
 
-    <p>
-        <strong>Q. 好きなもの</strong><br>
-        Gubby😍🐰<br>
-        単眼👁<br>
-        Roblox□✅<br>
-        ATLUS🫣<br>
-        <small>Things I like: Gubby, Monoeye, Roblox, and ATLUS.</small>
-    </p>
+        /* =========================
+           REQUEST BOX
+        ========================= */
 
-    <p>
-        <strong>Q. 創作について</strong><br>
-        単眼はどうしてこんなに可愛い<br>
-        <small>Why are Monoeye so cute?</small>
-    </p>
+        .request-box {
+            border: 3px solid #888888;
 
-    <p>
-        <strong>Q. 覚えてるキャラクターの数</strong><br>
-        21人🦭<br>
-        <small>Number of characters I can remember: 21. 🦭</small>
-    </p>
+            background: rgba(255, 255, 255, 0.6);
 
-</div>
+            padding: 25px;
 
-<!-- SNS / 連絡先ボックス -->
-<div class="sns-links" style="
-    border: 3px solid #888888;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 15px;
-    margin: 20px 0 20px auto;
-    width: 55%;
-    min-height: 120px;
-    box-sizing: border-box;
-    color: black;
-">
+            margin: 30px auto;
 
-    <h3 style="color: black;">
-        SNS / 連絡先
-    </h3>
+            max-width: 500px;
 
-    <div style="
-    text-align: right;
-">
+            text-align: center;
 
-    <!-- pixiv -->
-    <a href="https://www.pixiv.net/users/72472370">
-        <img src="pixiv.png"
-             alt="pixiv"
-             style="width: 60px; margin: 8px;">
-    </a>
+            box-sizing: border-box;
+        }
 
-    <!-- Discord -->
-    <a href="https://discord.gg/pVPZuE6ABx">
-        <img src="discord.PNG"
-             alt="Discord"
-             style="width: 60px; margin: 8px;">
-    </a>
+        .request-box .sns-icons img {
+            width: 120px;
+            margin: 10px;
+        }
 
-    <!-- Twitter -->
-    <a href="https://x.com/shogaishakoyou?s=11">
-        <img src="x.png"
-             alt="Twitter"
-             style="width: 60px; margin: 8px;">
-    </a>
 
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@vulcain450?_r=1&_t=ZS-9A5COUqXjvQ">
-        <img src="tiktok.png"
-             alt="TikTok"
-             style="width: 60px; margin: 8px;">
-    </a>
-    </div>
-</div>
-<!-- BACKボタン -->
-<button onclick="closeCreator()" style="
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 10001;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-">
+        /* =========================
+           BACK BUTTON
+        ========================= */
 
-    <img src="tester back.PNG"
-         alt="BACK"
-         style="
+        .page-back-button {
+            position: fixed;
+
+            left: 20px;
+            bottom: 20px;
+
+            z-index: 10001;
+
+            background: none;
+            border: none;
+
+            padding: 0;
+
+            cursor: pointer;
+        }
+
+        .page-back-button img {
             width: 30vw;
             display: block;
-         ">
+        }
 
-</button>
 
-</div>
+        /* =========================
+           SP / SMARTPHONE
+        ========================= */
 
-<script>
-function openCreator() {
-    document.getElementById("creatorPage").style.display = "block";
-}
+        @media screen and (max-width: 767px) {
 
-function closeCreator() {
-    document.getElementById("creatorPage").style.display = "none";
-}
-</script>
+            body {
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+                background-repeat: no-repeat;
+            }
 
-    <!-- 依頼ページ -->
-<div id="requestPage" style="
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('IMG_1239.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: black;
-    z-index: 10000;
-    overflow-y: auto;
-    padding: 30px;
-    box-sizing: border-box;
-">
 
-    <!-- タイトル -->
+            /* MENU */
+
+            .menu {
+                width: 100%;
+                right: -100%;
+            }
+
+
+            /* メニュー背景画像 */
+
+            .menu-background {
+                width: 40%;
+                height: 100%;
+
+                object-fit: fill;
+                object-position: right center;
+
+                right: 0;
+                left: auto;
+                top: 0;
+            }
+
+
+            /* メニュー文字 */
+
+            .menu-links {
+                width: fit-content;
+
+                padding-top: 100px;
+
+                margin-left: auto;
+                margin-right: 100px;
+
+                text-align: left;
+            }
+
+            .menu-links a {
+                display: block;
+
+                padding: 0 !important;
+                margin: 0 !important;
+
+                line-height: 1 !important;
+
+                color: red;
+
+                font-size: 5vw;
+                font-weight: bold;
+
+                text-decoration: none;
+            }
+
+
+            /* SNS */
+
+            .sns-icons {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+                gap: 5px;
+
+                flex-wrap: nowrap;
+            }
+
+            .sns-icons img {
+                width: 55px !important;
+                margin: 3px !important;
+            }
+
+
+            /* CREATOR SNS */
+
+            .creator-sns-box {
+                width: 100%;
+                min-height: 0;
+            }
+
+
+            /* REQUEST */
+
+            .request-box {
+                width: 100%;
+            }
+
+            .request-box .sns-icons img {
+                width: 55px !important;
+                margin: 3px !important;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP
+    ========================= -->
+
     <h1 style="
-        text-align: center;
-        font-size: 12vw;
-        color: black;
+        color: #C50000;
+        font-size: 7vw;
+        font-family: 'UnifrakturMaguntia', serif;
+        -webkit-text-stroke: 1px #000;
     ">
-        依頼はここから🎶
+        Welcome to CHAOS....
     </h1>
 
-    <!-- 依頼リンクボックス -->
-    <div class="sns-links" style="
-        border: 3px solid #888888;
-        background: rgba(255, 255, 255, 0.6);
-        padding: 25px;
-        margin: 30px auto;
-        max-width: 500px;
-        text-align: center;
-        box-sizing: border-box;
-    ">
+    <p style="color: white;">
+        準備中😤
+    </p>
 
-   <!-- SKeb -->
-<a href="https://skeb.jp/@ShogaishaKoyou" target="_blank">
-    <img src="skeb.png"
-         alt="SKeb"
-         style="width: 120px; margin: 10px;">
-</a>
 
-<!-- Twitter -->
-<a href="https://x.com/shogaishakoyou?s=11" target="_blank">
-    <img src="x.png"
-         alt="Twitter"
-         style="width: 120px; margin: 10px;">
-</a>
+    <!-- =========================
+         VISITOR COUNTER
+    ========================= -->
+
+    <div class="visitor-counter">
+
+        <div class="visitor-title">
+            VISITORS
+        </div>
+
+        <script src="https://nostalgic.llll-ll.com/components/visit.js"></script>
+
+        <nostalgic-counter
+            id="010101010110001101010-a8f3e68b"
+            type="total"
+            theme="dark"
+            style="
+                color: #d00000;
+                font-size: 30px;
+                font-weight: bold;
+            "
+        ></nostalgic-counter>
 
     </div>
 
-    <!-- REQUEST用BACKボタン -->
-<button onclick="closeRequest()" style="
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 10001;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-">
 
-    <img src="tester back.PNG"
-         alt="BACK"
-         style="
-            width: 30vw;
-            display: block;
-         ">
+    <!-- =========================
+         TOP BUTTON
+    ========================= -->
 
-</button>
+    <a href="#" class="top-button">
+        <img src="47_20260714233645.png" alt="TOP">
+    </a>
 
-</div>
 
-<script>
-function openRequest() {
-    document.getElementById("requestPage").style.display = "block";
-}
+    <!-- =========================
+         MENU BUTTON
+    ========================= -->
 
-function closeRequest() {
-    document.getElementById("requestPage").style.display = "none";
-}
-</script>
+    <button class="menu-button" onclick="toggleMenu()">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <div id="menu" class="menu">
+
+        <img
+            src="menuwallpaper.PNG"
+            class="menu-background"
+            alt=""
+        >
+
+        <div class="menu-links">
+
+            <a href="#characters">
+                CHARACTERS
+            </a>
+
+            <a href="#about">
+                ABOUT
+            </a>
+
+            <a href="#world">
+                WORLD
+            </a>
+
+            <a
+                href="javascript:void(0);"
+                onclick="openCreator()"
+            >
+                CREATOR
+            </a>
+
+            <a
+                href="javascript:void(0);"
+                onclick="openRequest()"
+            >
+                REQUEST
+            </a>
+
+            <a href="donate.html">
+                DONATE
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN BOX
+    ========================= -->
+
+    <div style="
+        border: 3px solid red;
+        background: black;
+        color: red;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 20px;
+        font-size: 40px;
+        font-family: 'Playfair Display', serif;
+    ">
+        MY OC ENCYCLOPEDIA
+    </div>
+
+
+    <!-- =========================
+         CHARACTER CARDS
+    ========================= -->
+
+
+    <!-- Cypress -->
+
+    <a href="lucky.html" style="text-decoration: none;">
+
+        <div style="
+            display: inline-block;
+            width: 220px;
+            background: #080808;
+            border: 4px solid #d00000;
+            padding: 8px;
+            text-align: center;
+            margin: 10px;
+            box-shadow:
+                inset 3px 3px 0 #333333,
+                inset -3px -3px 0 #000000,
+                5px 5px 0 #000000;
+        ">
+
+            <div style="
+                background: #000000;
+                border: 3px solid #d00000;
+                padding: 4px;
+            ">
+
+                <img
+                    src="cyp faceshot.PNG"
+                    alt="Cypress Vine"
+                    style="
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        display: block;
+                    "
+                >
+
+            </div>
+
+            <div style="
+                color: #d00000;
+                font-size: 28px;
+                font-weight: bold;
+                padding: 15px 5px 10px;
+            ">
+                Cypress Vine
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- Alina -->
+
+    <a href="aus.html" style="text-decoration: none;">
+
+        <div style="
+            display: inline-block;
+            width: 220px;
+            background: #080808;
+            border: 4px solid #d00000;
+            padding: 8px;
+            text-align: center;
+            margin: 10px;
+        ">
+
+            <div style="
+                background: #000000;
+                border: 3px solid #d00000;
+                padding: 4px;
+            ">
+
+                <img
+                    src="alina faceshot.jpg"
+                    alt="Alina Vysotsky"
+                    style="
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        display: block;
+                    "
+                >
+
+            </div>
+
+            <div style="
+                color: #d00000;
+                font-size: 28px;
+                font-weight: bold;
+                padding: 15px 5px 10px;
+            ">
+                Alina Vysotsky
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- Tester -->
+
+    <a href="aus.html" style="text-decoration: none;">
+
+        <div style="
+            display: inline-block;
+            width: 220px;
+            background: #080808;
+            border: 4px solid #d00000;
+            padding: 8px;
+            text-align: center;
+            margin: 10px;
+        ">
+
+            <div style="
+                background: #000000;
+                border: 3px solid #d00000;
+                padding: 4px;
+            ">
+
+                <img
+                    src="tester faceshot.jpg"
+                    alt="Tester"
+                    style="
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        display: block;
+                    "
+                >
+
+            </div>
+
+            <div style="
+                color: #d00000;
+                font-size: 28px;
+                font-weight: bold;
+                padding: 15px 5px 10px;
+            ">
+                Tester
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- Auspicious -->
+
+    <a href="aus.html" style="text-decoration: none;">
+
+        <div style="
+            display: inline-block;
+            width: 220px;
+            background: #080808;
+            border: 4px solid #d00000;
+            padding: 8px;
+            text-align: center;
+            margin: 10px;
+        ">
+
+            <div style="
+                background: #000000;
+                border: 3px solid #d00000;
+                padding: 4px;
+            ">
+
+                <img
+                    src="aus faceshot.jpg"
+                    alt="Auspicious"
+                    style="
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        display: block;
+                    "
+                >
+
+            </div>
+
+            <div style="
+                color: #d00000;
+                font-size: 28px;
+                font-weight: bold;
+                padding: 15px 5px 10px;
+            ">
+                Auspicious
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- Lucky -->
+
+    <a href="aus.html" style="text-decoration: none;">
+
+        <div style="
+            display: inline-block;
+            width: 220px;
+            background: #080808;
+            border: 4px solid #d00000;
+            padding: 8px;
+            text-align: center;
+            margin: 10px;
+        ">
+
+            <div style="
+                background: #000000;
+                border: 3px solid #d00000;
+                padding: 4px;
+            ">
+
+                <img
+                    src="lucky faceshot.jpg"
+                    alt="Lucky"
+                    style="
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        display: block;
+                    "
+                >
+
+            </div>
+
+            <div style="
+                color: #d00000;
+                font-size: 28px;
+                font-weight: bold;
+                padding: 15px 5px 10px;
+            ">
+                Lucky
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- Loren -->
+
+    <a href="aus.html" style="text-decoration: none;">
+
+        <div style="
+            display: inline-block;
+            width: 220px;
+            background: #080808;
+            border: 4px solid #d00000;
+            padding: 8px;
+            text-align: center;
+            margin: 10px;
+        ">
+
+            <div style="
+                background: #000000;
+                border: 3px solid #d00000;
+                padding: 4px;
+            ">
+
+                <img
+                    src="loren faceshot.jpg"
+                    alt="Loren"
+                    style="
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        display: block;
+                    "
+                >
+
+            </div>
+
+            <div style="
+                color: #d00000;
+                font-size: 28px;
+                font-weight: bold;
+                padding: 15px 5px 10px;
+            ">
+                Loren
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- =========================
+         CREATOR PAGE
+    ========================= -->
+
+    <div id="creatorPage">
+
+        <h1>
+            CREATOR
+        </h1>
+
+        <p class="creator-name">
+            Name:Chihiro/アセチルサリチル酸
+        </p>
+
+
+        <!-- Q&A -->
+
+        <div style="
+            border: 3px solid #888888;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            margin: 20px 0;
+            color: black;
+            text-align: center;
+        ">
+
+            <h3 style="color: black;">
+                Q&A
+            </h3>
+
+            <p>
+                <strong>Q. このサイトについて</strong><br>
+                OCが多すぎて収拾つかないので、まとめて見れるようにしたかった。<br>
+                <small>
+                    I have too many OCs, so I wanted a place where I could keep them all together.
+                </small>
+            </p>
+
+            <p>
+                <strong>Q. OCを作るようになったきっかけ</strong><br>
+                絵かいてたらなんぼでも増えます😰<br>
+                <small>
+                    They just keep multiplying whenever I draw. 😰
+                </small>
+            </p>
+
+            <p>
+                <strong>Q. 好きなもの</strong><br>
+                Gubby😍🐰<br>
+                単眼👁<br>
+                Roblox□✅<br>
+                ATLUS🫣<br>
+                <small>
+                    Things I like: Gubby, Monoeye, Roblox, and ATLUS.
+                </small>
+            </p>
+
+            <p>
+                <strong>Q. 創作について</strong><br>
+                単眼はどうしてこんなに可愛い<br>
+                <small>
+                    Why are Monoeye so cute?
+                </small>
+            </p>
+
+            <p>
+                <strong>Q. 覚えてるキャラクターの数</strong><br>
+                21人🦭<br>
+                <small>
+                    Number of characters I can remember: 21. 🦭
+                </small>
+            </p>
+
+        </div>
+
+
+        <!-- SNS -->
+
+        <div class="creator-sns-box">
+
+            <h3 style="color: black;">
+                SNS / 連絡先
+            </h3>
+
+            <div class="sns-icons">
+
+                <a href="https://www.pixiv.net/users/72472370">
+                    <img src="pixiv.png" alt="pixiv">
+                </a>
+
+                <a href="https://discord.gg/pVPZuE6ABx">
+                    <img src="discord.PNG" alt="Discord">
+                </a>
+
+                <a href="https://x.com/shogaishakoyou?s=11">
+                    <img src="x.png" alt="Twitter">
+                </a>
+
+                <a href="https://www.tiktok.com/@vulcain450?_r=1&_t=ZS-9A5COUqXjvQ">
+                    <img src="tiktok.png" alt="TikTok">
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CREATOR BACK -->
+
+        <button
+            class="page-back-button"
+            onclick="closeCreator()"
+        >
+
+            <img
+                src="tester back.PNG"
+                alt="BACK"
+            >
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         REQUEST PAGE
+    ========================= -->
+
+    <div id="requestPage">
+
+        <h1>
+            依頼はここから🎶
+        </h1>
+
+
+        <div class="request-box">
+
+            <div class="sns-icons">
+
+                <a
+                    href="https://skeb.jp/@ShogaishaKoyou"
+                    target="_blank"
+                >
+                    <img src="skeb.png" alt="SKeb">
+                </a>
+
+                <a
+                    href="https://x.com/shogaishakoyou?s=11"
+                    target="_blank"
+                >
+                    <img src="x.png" alt="Twitter">
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- REQUEST BACK -->
+
+        <button
+            class="page-back-button"
+            onclick="closeRequest()"
+        >
+
+            <img
+                src="tester back.PNG"
+                alt="BACK"
+            >
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         AUDIO
+    ========================= -->
+
+    <audio
+        id="clickSound"
+        src="ぬちゃ.mp3"
+    ></audio>
+
+
+    <!-- =========================
+         DON'T PUSH
+    ========================= -->
+
+    <button
+        id="dontPushButton"
+        style="
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            color: red;
+            border: 3px solid red;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 9999;
+        "
+    >
+        押さないでね
+    </button>
+
+
+    <video
+        id="secretVideo"
+        src="音割れゆっくりしんちゃん.mp4"
+        style="display:none;"
+        playsinline
+    ></video>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* MENU */
+
+        function toggleMenu() {
+            document
+                .getElementById("menu")
+                .classList
+                .toggle("open");
+        }
+
+
+        /* CREATOR */
+
+        function openCreator() {
+            document
+                .getElementById("creatorPage")
+                .style
+                .display = "block";
+        }
+
+        function closeCreator() {
+            document
+                .getElementById("creatorPage")
+                .style
+                .display = "none";
+        }
+
+
+        /* REQUEST */
+
+        function openRequest() {
+            document
+                .getElementById("requestPage")
+                .style
+                .display = "block";
+        }
+
+        function closeRequest() {
+            document
+                .getElementById("requestPage")
+                .style
+                .display = "none";
+        }
+
+
+        /* CLICK SOUND */
+
+        document.addEventListener("click", function () {
+
+            const sound =
+                document.getElementById("clickSound");
+
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play();
+            }
+
+        });
+
+
+        /* DON'T PUSH BUTTON */
+
+        const button =
+            document.getElementById("dontPushButton");
+
+        const video =
+            document.getElementById("secretVideo");
+
+
+        const appearTime =
+            Math.random() * 10000 + 5000;
+
+
+        setTimeout(() => {
+
+            if (Math.random() < 0.5) {
+
+                button.style.display = "block";
+
+
+                setTimeout(() => {
+
+                    button.style.display = "none";
+
+                }, 10000);
+
+            }
+
+        }, appearTime);
+
+
+        button.addEventListener("click", () => {
+
+            button.style.display = "none";
+
+            video.style.display = "block";
+
+            video.volume = 1.0;
+
+            video.play();
+
+        });
+
+
+        video.addEventListener("ended", () => {
+
+            video.style.display = "none";
+
+            video.currentTime = 0;
+
+        });
+
+    </script>
+
+</body>
+</html>
