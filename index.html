@@ -1057,3 +1057,24 @@ function closeCypress() {
 }
 
 </script>
+
+<style>
+@media screen and (max-width: 767px) {
+
+    #cypressPage > div {
+        grid-template-columns: 35% 65% !important;
+        gap: 10px !important;
+        padding: 15px !important;
+        min-height: auto !important;
+    }
+
+    #cypressPage > div > div:first-child {
+        min-height: 450px !important;
+    }
+
+    #cypressPage > div > div:last-child {
+        gap: 10px !important;
+    }
+
+}
+</style>
