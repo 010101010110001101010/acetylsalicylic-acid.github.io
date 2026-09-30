@@ -278,7 +278,7 @@ function toggleMenu() {
 </div>
 
 <!-- キャラクターボタン -->
-<a href="lucky.html" style="text-decoration: none;">
+<a href=" javascript:void(0);" onclick="openCypress()" style="text-decoration: none;">
 
     <!-- ここからカード -->
     <div style="
@@ -324,7 +324,31 @@ function toggleMenu() {
     </div>
     <!-- カードここまで -->
 </a>
+<!-- Cypress詳細画面 -->
+<div id="cypressPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back Ψver.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    overflow-y: auto;
+">
 
+    <!-- ここにさっきのボックス配置 -->
+
+</div>
+
+<script>
+function openCypress() {
+    document.getElementById("cypressPage").style.display = "block";
+}
+</script>
 <!-- ありーなボタン -->
 <a href="aus.html" style="text-decoration: none;">
 
