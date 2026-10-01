@@ -113,7 +113,9 @@ body {
         <a href="javascript:void(0);" onclick="openCreator()">
             CREATOR</a>
         <a href="javascript:void(0);" onclick="openRequest()">
-    REQUEST
+    REQUEST</a>
+<a href="javascript:void(0);" onclick="openGuideline()">
+    二次創作ガイドライン
 </a>
         <a href="donate.html">DONATE</a>
     </div>
@@ -1183,7 +1185,7 @@ video.addEventListener("ended", () => {
     <img src="tester back.PNG"
          alt="BACK"
          style="
-            width: 30vw;
+            width: 20%;
             display: block;
          ">
 
@@ -1271,7 +1273,7 @@ function closeCreator() {
     <img src="tester back.PNG"
          alt="BACK"
          style="
-            width: 30vw;
+            width: 20%;
             display: block;
          ">
 
@@ -1321,3 +1323,135 @@ function closeCypress() {
 
 }
 </style>
+
+<!-- 二次創作ガイドライン -->
+<div id="guidelinePage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* 背景画像 */
+    background-image: url('無題322_20220716232237.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    z-index: 10000;
+    overflow-y: auto;
+    padding: 30px;
+    box-sizing: border-box;
+">
+
+    <!-- タイトル -->
+    <h1 style="
+        color: #d00000;
+        text-align: center;
+        font-size: 10vw;
+        margin: 20px 0 30px;
+    ">
+        二次創作ガイドライン
+    </h1>
+
+
+    <!-- 基本ルール -->
+    <div style="
+        border: 3px solid #d00000;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        margin: 20px 0;
+        box-sizing: border-box;
+    ">
+
+        <h2 style="color: #d00000;">
+            基本ルール
+        </h2>
+
+        <p>
+            ここに基本ルールを書いてく
+        </p>
+
+    </div>
+
+
+    <!-- OK -->
+    <div style="
+        border: 3px solid #d00000;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        margin: 20px 0;
+        box-sizing: border-box;
+    ">
+
+        <h2 style="color: #d00000;">
+            OK
+        </h2>
+
+        <p>
+            ・ファンアート<br>
+            ・イラスト<br>
+            ・その他の二次創作
+        </p>
+
+    </div>
+
+
+    <!-- NG -->
+    <div style="
+        border: 3px solid #d00000;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        margin: 20px 0;
+        box-sizing: border-box;
+    ">
+
+        <h2 style="color: #d00000;">
+            NG
+        </h2>
+
+        <p>
+            ・ここに禁止事項を書く
+        </p>
+
+    </div>
+
+
+    <!-- BACK -->
+    <button onclick="closeGuideline()" style="
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 10001;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    ">
+
+        <img src="tester back.PNG"
+             alt="BACK"
+             style="
+                width: 20%;
+                display: block;
+             ">
+
+    </button>
+
+</div>
+
+
+<!-- ガイドラインを開く・閉じる -->
+<script>
+
+function openGuideline() {
+    document.getElementById("guidelinePage").style.display = "block";
+}
+
+function closeGuideline() {
+    document.getElementById("guidelinePage").style.display = "none";
+}
+
+</script>
