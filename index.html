@@ -1015,7 +1015,7 @@ video.addEventListener("ended", () => {
 </a>
 
 <!-- ろーれんボタン -->
-<a href="aus.html" style="text-decoration: none;">
+<a href="javascript:void(0);" onclick="openLoren()" style="text-decoration: none;">
 
     <div style="
         display: inline-block;
@@ -1060,7 +1060,195 @@ video.addEventListener("ended", () => {
     </div>
 
 </a>
+<!-- Loren詳細画面 -->
+<div id="LorenPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back Lorenver.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    overflow-y: auto;
+">
 
+<div style="
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+">
+
+    <!-- 左：Loren画像 -->
+    <div style="
+        border: 4px solid #000000;
+        background: #800000;
+        background: rgba(128, 0, 0, 0.5);
+        min-height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    ">
+
+        <img src="Loren.PNG"
+             alt="Loren"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+             ">
+
+    </div>
+
+
+    <!-- 右側 -->
+    <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    ">
+
+
+        <!-- 名前 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 20px;
+            min-height: 100px;
+            box-sizing: border-box;
+            color: #000000;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+        ">
+            Loren
+        </div>
+
+
+        <!-- 設定 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 30px;
+            min-height: 400px;
+            box-sizing: border-box;
+            color: #000000;
+            font-size: 30px;
+        ">
+
+15歳の白人の男の子
+そこそこムキムキ身長181cm
+Ψはお姉ちゃんだと思っている
+口数が少なくてクールな印象をつけられてるけど恥ずかしがりなだけ
+基本的に敬語で喋る
+低い声
+お茶漬けが嫌い
+変な宗教にハマってるのでΨと一緒に薬をやる時はアヤワスカをきめる
+        </div>
+
+
+        <!-- おまけ -->
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        ">
+
+            <!-- おまけ1 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="い.PNG"
+                     alt="おまけ1"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+
+            <!-- おまけ2 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="omake2.jpg"
+                     alt="おまけ2"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK -->
+<button onclick="closeLoren()" style="
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10001;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+">
+
+    <img src="tester back.PNG"
+         alt="BACK"
+         style="
+            width: 20%;
+            display: block;
+         ">
+
+</button>
+
+</div>
+
+<script>
+function openLoren() {
+    document.getElementById("LorenPage").style.display = "block";
+}
+ function closeLoren() {
+    document.getElementById("LorenPage").style.display = "none";
+}
+</script>
 <!-- 作者ページ -->
 <div id="creatorPage" style="
     display: none;
