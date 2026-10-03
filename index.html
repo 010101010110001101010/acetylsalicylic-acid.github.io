@@ -1656,3 +1656,110 @@ function closeGuideline() {
 }
 
 </script>
+
+<!-- COLUMN（日記） -->
+<div id="columnPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('IMG_2451.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    z-index: 10000;
+    overflow-y: auto;
+    padding: 30px;
+    box-sizing: border-box;
+">
+
+    <h1 style="
+        color: #d00000;
+        text-align: center;
+        font-size: 60px;
+        margin: 20px 0 40px;
+    ">
+        COLUMN
+    </h1>
+<p style="
+
+    color: white;
+
+    text-align: center;
+
+">
+
+    個人的な日記です。<br>
+
+    日々のことや、思ったことなどを書いています。
+    私は統合失調症で診断が出ていて、かなり鬱が酷いタイプだと思うので日記は閲覧注意です。荒れてます。
+
+</p>
+
+    <!-- 日記 ここから -->
+
+    <div style="
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto 25px;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 3px solid #d00000;
+        background: rgba(128, 0, 0, 0.5);
+        color: white;
+    ">
+
+        <div style="
+            color: #d00000;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        ">
+            2026.10.03
+        </div>
+
+        <div style="
+            font-size: 18px;
+            line-height: 1.8;
+        ">
+            ［12:33］最近寂しいので全然眠れない上に今日起きたら体がフラフラだったとりあえず今カップ麺食いながらこのサイト作ってる。彼氏が風邪こじらせてて一緒にいられなくて寂しい。いつも寝る前はあの時の瞬間がループで再生されてて苦しい。怖い出来事ってなんで繰り返し脳内で映し出されるの?拷問?
+            <br>
+        </div>
+
+    </div>
+
+    <!-- 日記 ここまで -->
+
+
+    <!-- BACK -->
+    <button onclick="closeColumn()" style="
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 10001;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    ">
+        <img src="tester back.PNG" alt="BACK" style="
+            width: 20vw;
+            display: block;
+        ">
+    </button>
+
+</div>
+
+
+<script>
+function openColumn() {
+    document.getElementById("columnPage").style.display = "block";
+}
+
+function closeColumn() {
+    document.getElementById("columnPage").style.display = "none";
+}
+</script>
