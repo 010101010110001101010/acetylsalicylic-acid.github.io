@@ -876,7 +876,7 @@ video.addEventListener("ended", () => {
 </script>
 
 <!-- キャラクターボタン -->
-<a href="aus.html" style="text-decoration: none;">
+<a href="javascript:void(0);" onclick="opentester()" style="text-decoration: none;">
 
     <div style="
         display: inline-block;
@@ -921,7 +921,196 @@ video.addEventListener("ended", () => {
     </div>
 
 </a>
+<!-- Tester詳細画面 -->
+<div id="testerPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back Testver.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    overflow-y: auto;
+">
 
+<div style="
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+">
+
+    <!-- 左：Tester画像 -->
+    <div style="
+        border: 4px solid #000000;
+        background: #800000;
+        background: rgba(128, 0, 0, 0.5);
+        min-height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    ">
+
+        <img src="Tester.PNG"
+             alt="Tester"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+             ">
+
+    </div>
+    <!-- 右側 -->
+    <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    ">
+        <!-- 名前 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 20px;
+            min-height: 100px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+        ">
+            Tester
+        </div>
+
+
+        <!-- 設定 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 30px;
+            min-height: 400px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 30px;
+        ">
+14歳
+女の子
+不登校
+4/15生まれ牡羊座♈
+伊達メガネかけてる
+好きな物はうるさい音楽とショート動画
+よく音ゲーしてる
+嫌いなものがあまり無い（本人がわかってない）
+喋るのが得意じゃない
+クール気取りのドパガキ
+自閉症
+口数が少ない
+あまり笑顔を見せないがツボ浅い
+Luckyが好き（お姉ちゃんだと思ってる）
+        </div>
+
+
+        <!-- おまけ -->
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        ">
+
+            <!-- おまけ1 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="い.PNG"
+                     alt="おまけ1"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+
+            <!-- おまけ2 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="omake2.jpg"
+                     alt="おまけ2"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK -->
+<button onclick="closetester()" style="
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10001;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+">
+
+    <img src="tester back.PNG"
+         alt="BACK"
+         style="
+            width: 20%;
+            display: block;
+         ">
+
+</button>
+
+</div>
+
+<script>
+function opentester() {
+    document.getElementById("testerPage").style.display = "block";
+}
+ function closetester() {
+    document.getElementById("testerPage").style.display = "none";
+}
+</script>
 <!-- キャラクターボタン -->
 <a href="aus.html" style="text-decoration: none;">
 
