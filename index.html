@@ -96,11 +96,11 @@ body {
  @media screen and (min-width: 1025px) {
     .top-button {
         right: 10px;
-        bottom: 10px;
+        bottom: 15%;
     }
 
     .top-button img {
-        width: 
+        width: 20%
 </style>
  
 <!-- 三本線 -->
@@ -194,41 +194,6 @@ body {
     width: 100%;
     right: -100%;
 }
-
-    /* PC用メニュー */
-@media screen and (min-width: 1025px) {
-
-    .menu {
-        width: 100%;
-        right: -100%;
-    }
-
-    .menu.open {
-        right: 0;
-    }
-
-    .menu-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        padding-top: 120px;
-        padding-left: 40px;
-        margin: 0;
-        width: fit-content;
-        position: relative;
-        z-index: 1;
-    }
-
-    .menu-links a {
-        display: block;
-        color: red;
-        font-size: 28px;
-        font-weight: bold;
-        font-family: 'UnifrakturMaguntia', serif;
-        text-decoration: none;
-    }
-}
     /* メニュー文字 */
     .menu-links {
         position: relative;
@@ -293,6 +258,41 @@ body {
 .sns-links img {
     width: 55px !important;
     margin: 3px !important;
+}
+
+       /* PC用メニュー */
+@media screen and (min-width: 1025px) {
+
+    .menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .menu.open {
+        right: 0;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding-top: 120px;
+        padding-left: 40px;
+        margin: 0;
+        width: fit-content;
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu-links a {
+        display: block;
+        color: red;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: 'UnifrakturMaguntia', serif;
+        text-decoration: none;
+    }
 }
 </style>
 
