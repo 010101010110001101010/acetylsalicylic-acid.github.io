@@ -802,6 +802,491 @@ function openLum() {
     document.getElementById("LumPage").style.display = "none";
 }
 </script>
+
+<a href="javascript:void(0);" onclick="openちづる()" style="text-decoration: none;">
+
+<!-- ちづるぼたん -->
+<a href="javascript:void(0);" onclick="openちづる()" style="text-decoration: none;">
+    <!-- ここからカード -->
+    <div style="
+        display: inline-block;
+        width: 220px;
+        background: #080808;
+        border: 4px solid #d00000;
+        padding: 8px;
+        text-align: center;
+        margin: 10px;
+        box-shadow:
+            inset 3px 3px 0 #333333,
+            inset -3px -3px 0 #000000,
+            5px 5px 0 #000000;
+    ">
+
+        <!-- 画像 -->
+        <div style="
+            background: #000000;
+            border: 3px solid #d00000;
+            padding: 4px;
+        ">
+            <img src="ちづる faceshot.PNG"
+                 alt="ちづる"
+                 style="
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    display: block;
+                 ">
+        </div>
+
+        <!-- 名前 -->
+        <div style="
+            color: #d00000;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px 5px 10px;
+        ">
+            由良 ちづる
+        </div>
+
+    </div>
+    <!-- カードここまで -->
+</a>
+<!-- ちづる詳細画面 -->
+<div id="ちづるPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('きゃらはいけい.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    overflow-y: auto;
+">
+
+<div style="
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+">
+
+    <!-- 左：なまえ画像 -->
+    <div style="
+        border: 4px solid #000000;
+        background: #800000;
+        background: rgba(128, 0, 0, 0.5);
+        min-height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    ">
+
+        <img src="由良 ちづる.PNG"
+             alt="由良ちづる"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+             ">
+
+    </div>
+
+
+    <!-- 右側 -->
+    <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    ">
+
+
+        <!-- 名前 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 20px;
+            min-height: 100px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+        ">
+            由良 ちづる
+        </div>
+
+
+        <!-- 設定 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 30px;
+            min-height: 400px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 30px;
+        ">
+年齢不明 身長177cm 痩せ型 女性
+眼帯の下は空洞
+美人
+色白
+喫煙者（煙管）
+甘い香りのものを吸っている旦那と死別している
+25歳の息子がいる
+ミーラの昔からの友人
+お酒が好き
+柔らかい口調で敬語で喋る
+自分のことをあまり喋らない
+誰にも話してないが実は妖怪
+        </div>
+
+
+        <!-- おまけ -->
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        ">
+
+            <!-- おまけ1 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="い.PNG"
+                     alt="おまけ1"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+
+            <!-- おまけ2 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="omake2.jpg"
+                     alt="おまけ2"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK -->
+<button onclick="closeLum()" style="
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10001;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+">
+
+    <img src="tester back.PNG"
+         alt="BACK"
+         style="
+            width: 20%;
+            display: block;
+         ">
+
+</button>
+
+</div>
+
+<script>
+function openちづる() {
+    document.getElementById("ちづるPage").style.display = "block";
+}
+ function closeちづる() {
+    document.getElementById("ちづるPage").style.display = "none";
+}
+</script>
+
+    <a href="javascript:void(0);" onclick="openmira()" style="text-decoration: none;">
+
+!-- なまえぼたん -->
+<a href="javascript:void(0);" onclick="openmira()" style="text-decoration: none;">
+    <!-- ここからカード -->
+    <div style="
+        display: inline-block;
+        width: 220px;
+        background: #080808;
+        border: 4px solid #d00000;
+        padding: 8px;
+        text-align: center;
+        margin: 10px;
+        box-shadow:
+            inset 3px 3px 0 #333333,
+            inset -3px -3px 0 #000000,
+            5px 5px 0 #000000;
+    ">
+
+        <!-- 画像 -->
+        <div style="
+            background: #000000;
+            border: 3px solid #d00000;
+            padding: 4px;
+        ">
+            <img src="mira faceshot.PNG"
+                 alt="mira"
+                 style="
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    display: block;
+                 ">
+        </div>
+
+        <!-- 名前 -->
+        <div style="
+            color: #d00000;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px 5px 10px;
+        ">
+            Mira
+        </div>
+
+    </div>
+    <!-- カードここまで -->
+</a>
+<!-- mira詳細画面 -->
+<div id="miraPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('きゃらはいけい.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    overflow-y: auto;
+">
+
+<div style="
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+">
+
+    <!-- 左：mira画像 -->
+    <div style="
+        border: 4px solid #000000;
+        background: #800000;
+        background: rgba(128, 0, 0, 0.5);
+        min-height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    ">
+
+        <img src="mira.PNG"
+             alt="Mira"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+             ">
+
+    </div>
+
+
+    <!-- 右側 -->
+    <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    ">
+
+
+        <!-- 名前 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 20px;
+            min-height: 100px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+        ">
+            Mira/ミーラ
+        </div>
+
+
+        <!-- 設定 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 30px;
+            min-height: 400px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 30px;
+        ">
+
+34歳の白人女性、身長168cm 普通体型
+職業シェフ（ガチのプロ）
+赤いエクステをつけている
+優しいけど不器用
+ちづるの昔からの友人
+クールだけど照れ屋
+お酒も作れる
+仕事かけ持ちしている（レストランがメイン）
+いつもスーツを着ている（仕事着）
+お出かけなどは女の子らしい肩出しのかわいい服も着たりする
+女の子らしい性格で口調は社会人らしい感じ
+ちづると喋る時はタメ語
+ちづるといつからの付き合いなのかちづるが何歳なのか知らないけど見る度見た目変わってなくて少し怖い
+
+        </div>
+
+
+        <!-- おまけ -->
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        ">
+
+            <!-- おまけ1 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="い.PNG"
+                     alt="おまけ1"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+
+            <!-- おまけ2 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="omake2.jpg"
+                     alt="おまけ2"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK -->
+<button onclick="closeLum()" style="
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10001;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+">
+
+    <img src="tester back.PNG"
+         alt="BACK"
+         style="
+            width: 20%;
+            display: block;
+         ">
+
+</button>
+
+</div>
+
+<script>
+function openmira() {
+    document.getElementById("miraPage").style.display = "block";
+}
+ function closemira() {
+document.getElementById("miraPage").style.display = "none";
+}
+</script>
 <!-- ありーなボタン -->
 <a href="aus.html" style="text-decoration: none;">
 
