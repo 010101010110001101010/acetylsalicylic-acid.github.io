@@ -1695,7 +1695,7 @@ function opentester() {
 </a>
 
 <!-- キャラクターボタン -->
-<a href="aus.html" style="text-decoration: none;">
+<a href="javascript:void(0);" onclick="openLucky()" style="text-decoration: none;">
 
     <div style="
         display: inline-block;
@@ -1740,7 +1740,198 @@ function opentester() {
     </div>
 
 </a>
+<!-- ななえ詳細画面 -->
+<div id="LuckyPage" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back Lukkyver.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    overflow-y: auto;
+">
 
+<div style="
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+">
+
+    <!-- 左：なまえ画像 -->
+    <div style="
+        border: 4px solid #000000;
+        background: #800000;
+        background: rgba(128, 0, 0, 0.5);
+        min-height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    ">
+
+        <img src="Lucky.PNG"
+             alt="Lucky"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+             ">
+
+    </div>
+
+
+    <!-- 右側 -->
+    <div style="
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    ">
+
+
+        <!-- 名前 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 20px;
+            min-height: 100px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+        ">
+            Lucky
+        </div>
+
+
+        <!-- 設定 -->
+        <div style="
+            border: 4px solid #000000;
+            background: #800000;
+            background: rgba(128, 0, 0, 0.5);
+            padding: 30px;
+            min-height: 400px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 30px;
+        ">
+脳天気な黒人女性（18歳）
+SCENEやEMO系ファッションが好き
+生き物たくさん飼ってる（虫とか関係なく全部好き）
+ギャル
+Auspiciousの彼女
+Testerに優しい
+Testerを妹だと思ってる
+少しアホ
+Testerの過去を少し知ってる
+生き物とハンバーガーが好き
+一人称アタシ
+嫌いなものはわざと悪いことする人
+        </div>
+
+
+        <!-- おまけ -->
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        ">
+
+            <!-- おまけ1 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="い.PNG"
+                     alt="おまけ1"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+
+            <!-- おまけ2 -->
+            <div style="
+                border: 4px solid #000000;
+                background: #800000;
+                background: rgba(128, 0, 0, 0.5);
+                min-height: 250px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            ">
+
+                <img src="omake2.jpg"
+                     alt="おまけ2"
+                     style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                     ">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK -->
+<button onclick="closeLucky()" style="
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10001;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+">
+
+    <img src="tester back.PNG"
+         alt="BACK"
+         style="
+            width: 20%;
+            display: block;
+         ">
+
+</button>
+
+</div>
+
+<script>
+function openLucky() {
+    document.getElementById("LuckyPage").style.display = "block";
+}
+ function closeLucky() {
+    document.getElementById("LuckyPage").style.display = "none";
+}
+</script>
 <!-- ろーれんボタン -->
 <a href="javascript:void(0);" onclick="openLoren()" style="text-decoration: none;">
 
